@@ -9,9 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- LESS -->
-    <link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" /> -->
+
+    <!-- CSS -->
+    <link rel = "stylesheet" href = "assets/css/style.css" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -78,7 +81,7 @@
                 </div>
                 <div id = "about-sadrzaj" class="container width80 padd-tb f-ai-cen">
                     <div id="about-slika" class = "f-jc-cen">
-                        <img src = "assets/img/autor2.png" alt = "Moja slika"/>
+                        <img src = "assets/img/autor.jpg" alt = "Moja slika"/>
                     </div>
                     <div id="about-opis" >
                         <div class="opis-blok">
@@ -144,11 +147,11 @@
                 </div>
                 <div id = "projects-blok" class="container width80 padd-tb f-ai-cen f-jc-sb">
                     <div class="project-site">
-                        <a href = "https://bluebutterbaby.github.io/Muzej-Istorije-Dinosaurusa/" target = "_blank"><img src = "assets/img/site1.png" alt = "Prvi Projekat"/></a>
+                        <a href = "https://bluebutterbaby.github.io/Muzej-Istorije-Dinosaurusa/" target = "_blank"><img src = "assets/img/site1.jpg" alt = "Prvi Projekat"/></a>
                         <p>HTML5 & CSS3</p>
                     </div>
                     <div class="project-site">
-                        <a href = "index.html"><img src = "assets/img/site2.png" alt = "Drugi Projekat"/></a>
+                        <a href = "index.html"><img src = "assets/img/site2.jpg" alt = "Drugi Projekat"/></a>
                         <p>HTML5 & CSS3 & LESS</p>
                     </div>
                 </div>
@@ -163,38 +166,24 @@
                         <a id = "contact"></a><h2>Contact m<span>e</span></h2></a>
                     </div>
                 </div>
-                <!-- <div id = "forma-container" class= "container width85 padd-tb f-jc-cen f-ai-cen">
-                    <div id = "forma">
+                <div id = "info-container" class= "container width85 padd-tb f-jc-sb f-ai-cen">
+                    <div id="forma">
                         <form method = "GET" action = "Poruke.php">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type = "text" name = "FirstName" id = "FirstName" placeholder = "First Name"/>
-                                        </td>
-                                        <td>
-                                            <input type = "text" name = "LastName" id = "LastName" placeholder = "Last Name"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan = "2">
-                                            <input type = "email" name = "Email" id = "Email" placeholder = "Email"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan = "2">
-                                            <textarea placeholder = "Your Message"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan = "2">
-                                            <input type = "submit" name = "Submit" id = "Submit" value = "Submit"/>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="forma-red f-jc-sb">
+                                <input type = "text" name = "FirstName" id = "FirstName" placeholder = "First Name"/>
+                                <input type = "text" name = "LastName" id = "LastName" placeholder = "Last Name"/>
+                            </div>
+                            <div class="forma-red">
+                                <input type = "email" name = "Email" id = "Email" placeholder = "Email"/>
+                            </div>
+                            <div class="forma-red">
+                                <textarea placeholder = "Your Message"></textarea>
+                            </div>
+                            <div class="forma-red">
+                                <input type = "submit" name = "Submit" id = "Submit" value = "Submit"/>
+                            </div>
                         </form>
-                    </div> -->
+                    </div>
                     <div id="contact-info">
                         <div class="contact-blok f-ai-cen">
                             <i class="fa-regular fa-envelope"></i>
@@ -231,15 +220,32 @@
                 </div>   
             </div>
         </div>
+    </main>
 
-        <!-- Footer -->
-        <footer>
-            <div class="holder100">
-                <div class="cointainer width80 f-ai-cen padd-tb">
-                    <p>Copyright by Bojan Kozomara</p>
+    <!-- Footer -->
+    <footer>
+        <div class="holder100">
+            <div class="container width80 f-ai-cen padd-tb f-jc-se">
+                <div class="footer-blok f-ai-cen f-jc-cen">
+                    <p>&#169; 2023 Bojan Kozomara<span>. All rights reserved.</span></p>
+                </div>
+                <div class="footer-blok f-ai-cen f-jc-cen">
+                    <a href = "assets/css/style.less" target = "_blank">
+                        <i class="fa-brands fa-less"></i>
+                    </a>
+                </div>
+                <div class="footer-blok f-ai-cen f-jc-cen">
+                    <a href = "assets/css/style-copy.css" target = "_blank">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </a>
+                </div>
+                <div class="footer-blok f-ai-cen f-jc-cen">
+                    <a href = "sitemap.xml" target = "_blank">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </a>
                 </div>
             </div>
-        </footer>
-    </main>
+        </div>
+    </footer>
 </body>
 </html>

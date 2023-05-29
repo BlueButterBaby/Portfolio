@@ -2,8 +2,6 @@
 @bela: #fff;
 @crna: #090908;
 
-@import "responsive.css";
-
 *{
     margin: 0px;
     padding: 0px;
@@ -64,6 +62,11 @@ body{
 .f-jc-cen{
     display: flex;
     justify-content: center;
+}
+
+.f-jc-se{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .f-ai-cen{
@@ -179,13 +182,13 @@ body{
             flex-direction: column;
             width: 55%;
             h3{
-                font-size: 28px;
+                font-size: 32px;
                 color: @tamno-plava;
                 text-align: center;
                 padding-bottom: 10px;
             }
             p{
-                font-size: 22px;
+                font-size: 26px;
                 padding-bottom: 30px;
             }
         }
@@ -245,69 +248,68 @@ body{
 
 #contact{
     width: 100%;
-    #forma{
-        display: flex;
-        box-sizing: border-box;
-        td{
-            padding: 0px 20px;
-            padding-bottom: 20px;
-        }
-
-        input{
-            font-family: 'Roboto Condensed', sans-serif;
-            font-family: 'Rubik', sans-serif;
-            font-size: 22px;
-            background-color: @crna;
-            color: @bela;
-            &:focus {
-                outline: 0px;
-              }
-        }
-
-        input[type = text], input[type = email], textarea{
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: 2px solid @tamno-plava;
-            margin-bottom: 30px;
-            padding-bottom: 8px;
-            color: @bela;
-            &::placeholder{
+    #info-container{
+        #forma{
+            width: 45%;
+            input{
+                font-family: 'Roboto Condensed', sans-serif;
+                font-family: 'Rubik', sans-serif;
+                font-size: 22px;
+                background-color: @crna;
                 color: @bela;
+                &:focus {
+                    outline: 0px;
+                }
             }
-        }
-        input[type = email]{
-            width: 100%;
-        }
 
-        textarea{
-            &:focus {
-                outline: 0px;
+            input[type = text]{
+                width: 45%;
             }
-            font-family: 'Rubik', sans-serif;
-            border-bottom: 2px solid @tamno-plava;
-            width: 100%;
-            font-size: 22px;
-            background-color: @crna;
-        }
 
-        input[type = submit]{
-            display: flex;
-            margin: 0 auto;
-            padding: 10px 65px;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: @crna;
-            color: @bela;
-            border: none;
-            border-bottom: 2px solid @tamno-plava;
-        } 
+            input[type = text], input[type = email], textarea{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid @tamno-plava;
+                margin-bottom: 30px;
+                padding-bottom: 8px;
+                color: @bela;
+                &::placeholder{
+                    color: @bela;
+                }
+            }
+            input[type = email]{
+                width: 100%;
+            }
+
+            textarea{
+                &:focus {
+                    outline: 0px;
+                }
+                font-family: 'Rubik', sans-serif;
+                border-bottom: 2px solid @tamno-plava;
+                width: 100%;
+                font-size: 22px;
+                background-color: @crna;
+            }
+
+            input[type = submit]{
+                display: flex;
+                margin: 0 auto;
+                padding: 10px 65px;
+                font-size: 20px;
+                font-weight: bold;
+                background-color: @crna;
+                color: @bela;
+                border: none;
+                border-bottom: 2px solid @tamno-plava;
+            } 
+        }
     }
     #contact-info{
+        width: 45%;
         .contact-blok{
-            display: flex;
-            justify-content: flex-start;
-            margin-left: 80px;
+            justify-content: center;
             a, p{
                 color: @bela;
                 font-size: 24px;
@@ -322,17 +324,20 @@ body{
             
         }
         .socials{
-            display: flex;
-            justify-content: flex-start;
-            margin-left: 80px;
             ul{
                 list-style-type: none;
                 display: flex;
                 margin: 0px auto;
                 li{
                     padding-right: 40px;
+                    &:last-child{
+                        padding-right: 0px;
+                    }
                     a{
-                        font-size: 40px;
+                        font-size: 30px;
+                        &:hover{
+                            color: @bela;
+                        }
                     }
                 }
             }
@@ -342,7 +347,570 @@ body{
 
 footer{
     border-top: 2px solid @tamno-plava;
-    p{
-        color: @bela;
+    .footer-blok{
+        width: 15%;
+        &:first-child{
+            width: 40%;
+        }
+        p{
+            color: @bela;
+            span{
+                color: @bela;
+            }
+        }
+        a{
+            font-size: 40px;
+            &:hover{
+                color: @bela;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1156px) {
+    main{
+        #about{
+            #about-sadrzaj{
+                #about-opis{
+                    h3{
+                        font-size: 26px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                .strength{
+                    i{
+                        font-size: 58px;
+                    }
+                    h4{
+                        font-size: 24px;
+                    }
+                    p{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+        #contact{
+            #info-container{
+                #forma{
+                    input, textarea{
+                        font-size: 20px;
+                        &[type = submit]{
+                            font-size: 18px;
+                        }
+                    }
+                }
+                #contact-info{
+                    .contact-blok{
+                        a, p{
+                            font-size: 22px;
+                        }
+                        i{
+                            font-size:22px;
+                        }
+                        
+                    }
+                    .socials{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px){
+    header{
+        .container{
+            flex-wrap: wrap;
+            #logo{
+                width: 100%;
+                justify-content: center;
+            }
+            #menu{
+                width: 100%;
+                ul{
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    main{
+        #about{
+            #about-sadrzaj{
+                #about-opis{
+                    .opis-blok{
+                        h3{
+                            font-size: 22px;
+                        }
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                .strength{
+                    width: 27%;
+                }
+            }
+        }
+        #projects{
+            #projects-blok{
+                .project-site{
+                    width: 45%;
+                }
+            }
+        }
+    }
+    footer{
+        .footer-blok{
+            &:first-child{
+                width: 50%;
+            }
+            p{
+                font-size: 16px;
+            }
+            a{
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px){
+    main{
+        #about{
+            #about-sadrzaj{
+                #about-opis{
+                    .opis-blok{
+                        h3{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                .strength{
+                    width: 30%;
+                    i{
+                        font-size: 54px;
+                    }
+                    h4{
+                        font-size: 23px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        #projects{
+            #projects-blok{
+                .project-site{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        #contact{
+            #info-container{
+                #forma{
+                    input, textarea{
+                        font-size: 18px;
+                        &[type = submit]{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                #contact-info{
+                    .contact-blok{
+                        a, p{
+                            font-size: 20px;
+                        }
+                        i{
+                            font-size:20px;
+                        }
+                        
+                    }
+                    .socials{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 26px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-blok{
+            p{
+                font-size: 14px;
+            }
+            a{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 782px){
+    header{
+        .container{
+            #menu{
+                ul{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    main{
+        #cover{
+            height: 683px;
+            #tr-bg{
+                .bg-text{
+                    p{
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+        .naslov-oblasti{
+            h2{
+                font-size: 32px;
+            }
+        }
+        #about{
+            p{
+                font-size: 20px;
+            }
+            #about-sadrzaj{
+                flex-direction: column;
+                padding: 0px;
+                #about-slika{
+                    padding-bottom: 20px;
+                }
+                #about-opis{
+                    width: 70%;
+                    .opis-blok{
+                        p{
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                flex-direction: column;
+                .strength{
+                    width: 55%;
+                    flex-direction: column;
+                    margin-bottom: 30px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                    i{
+                        font-size: 54px;
+                        padding-bottom: 15px;
+                    }
+                    h4{
+                        font-size: 23px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+        }
+        #projects{
+            #projects-blok{
+                flex-direction: column;
+                .project-site{
+                    width: 60%;
+                    &:first-child{
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+        }
+        #contact{
+            #info-container{
+                flex-direction: column;
+                #forma{
+                        width: 70%;
+                    }
+                
+                #contact-info{
+                    margin-top: 30px;
+                    width: 70%;
+                    .contact-blok{
+                        a, p{
+                            font-size: 20px;
+                            padding-bottom: 30px;
+                        }
+                        i{
+                            font-size:20px;
+                            padding-bottom: 30px;
+                        }
+                        
+                    }
+                    .socials{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 26px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-blok{
+            width: 15%;
+            &:first-child{
+                width: 30%;
+            }
+            span{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px){
+    main{
+        #about{
+            p{
+                font-size: 17px;
+            }
+            .container{
+                padding: 10px 0px;
+            }
+        }
+        #cover{
+            #tr-bg{
+                .bg-text{
+                    padding: 35px;
+                }
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                .strength{
+                    width: 65%;
+                    i{
+                        font-size: 50px;
+                    }
+                    h4{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+            
+        }
+        #projects{
+            #projects-blok{
+                .project-site{
+                    width: 65%;
+                }
+            }
+        }
+        #contact{
+            #info-container{
+                #forma{
+                    input, textarea{
+                        font-size: 16px;
+                        &[type = submit]{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+                #contact-info{
+                    .contact-blok{
+                        a, p{
+                            font-size: 16px;
+                        }
+                        i{
+                            font-size: 18px;
+                        }
+                        
+                    }
+                    .socials{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-blok{
+            p{
+                font-size: 12px;
+            }
+            a{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 416px){
+    header{
+        #logo{
+            #logo-img{
+                img{
+                    height: 55px;
+                }
+            }
+            #logo-text{
+                h1{
+                    font-size: 38px;
+                }
+            }
+        }
+        #menu{
+            ul{
+                li{
+                    a{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        #cover{
+            #tr-bg{
+                .bg-text{
+                    p{
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+        #about{
+            p{
+                font-size: 13px;
+            }
+        }
+        .naslov-oblasti{
+            h2{
+                font-size: 24px;
+            }
+        }
+        #strengths{
+            #strength-blokovi{
+                .strength{
+                    width: 80%;
+                    i{
+                        font-size: 40px;
+                    }
+                    h4{
+                        font-size: 17px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }   
+        }
+        #projects{
+            #projects-blok{
+                .project-site{
+                    width: 80%;
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        #contact{
+            #info-container{
+                #forma{
+                    input, textarea{
+                        font-size: 13px;
+                        &[type = submit]{
+                            font-size: 12px;
+                            padding: 10px 50px;
+                        }
+                    }
+                }
+                #contact-info{
+                    .contact-blok{
+                        a, p{
+                            font-size: 13px;
+                        }
+                        i{
+                            font-size: 15px;
+                        }
+                        
+                    }
+                    .socials{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-blok{
+            &:first-child{
+                width: 40%;
+            }
+            p{
+                font-size: 11px;
+            }
+            a{
+                font-size: 20px;
+            }
+        }
     }
 }
